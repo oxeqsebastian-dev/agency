@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+  --font-optimistic: var(--font-optimistic);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: var(--font-optimistic), system-ui, sans-serif;
+}
+
+*::-webkit-scrollbar {
+  width: 0px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgb(74, 74, 74);
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.react-tel-input .form-control {
+  border: none !important;
+  border-radius: 6px !important;
+  height: 100% !important;
+  width: 100% !important;
+  background-color: transparent !important;
+}
+
+.react-tel-input {
+  height: 100% !important;
+  border-radius: 6px !important;
+  background-color: transparent;
+}
+
+.flag-dropdown {
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 6px 0 0 6px !important;
+}
+
+.react-tel-input .flag-dropdown.open {
+  border-radius: 6px 0 0 6px !important;
+}
+
+.react-tel-input .selected-flag {
+  border-right: 1px solid #d4dbe3 !important;
+}
+
+.react-tel-input .selected-flag:hover,
+.react-tel-input .selected-flag:focus {
+  background-color: transparent !important;
+  border-radius: 6px 0 0 6px !important;
+}
+
+.react-tel-input .flag-dropdown.open .selected-flag {
+  border-radius: 6px 0 0 6px !important;
+  background-color: transparent !important;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.logo-loading {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.logo-loading .loading-img {
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
+  /* Giúp ảnh full màn mà không méo */
+}
+
+input::placeholder {
+  font-size: 14px;
+  font-weight: 300 !important;
+}
